@@ -51,40 +51,40 @@
 		// Creators (dropdown list?)
 		// // Director
         array(
-            'label' => 'Director',
-            'name'  => 'Director',
+            'label' => 'Creator - Director',
+            'name'  => 'Creator - Director',
             /* 'description' => 'Director. (For personal names use "LastName, FirstName MiddleName, Suffix").', */
             'data_type'   => 'Tiny Text',
         ),
 		
 		// // Interviewer
         array(
-            'label' => 'Interviewer',
-            'name'  => 'Interviewer',
+            'label' => 'Creator - Interviewer',
+            'name'  => 'Creator - Interviewer',
             /* 'description' => 'Interviewer. (For personal names use "LastName, FirstName MiddleName, Suffix").', */
             'data_type'   => 'Tiny Text',
         ),
 		
 		// // Performer
         array(
-            'label' => 'Performer',
-            'name'  => 'Performer',
+            'label' => 'Creator - Performer',
+            'name'  => 'Creator - Performer',
             /* 'description' => 'Performer. (For personal names use "LastName, FirstName MiddleName, Suffix").', */
             'data_type'   => 'Tiny Text',
         ),
 		
 		// // Producer
 		        array(
-            'label' => 'Producer',
-            'name'  => 'Producer',
+            'label' => 'Creator - Producer',
+            'name'  => 'Creator - Producer',
             /* 'description' => 'Producer. (For personal names use "LastName, FirstName MiddleName, Suffix").', */
             'data_type'   => 'Tiny Text',
         ),
 		
 		// // Writer
         array(
-            'label' => 'Writer',
-            'name'  => 'Writer',
+            'label' => 'Creator - Writer',
+            'name'  => 'Creator - Writer',
             /* 'description' => 'Writer. (For personal names use "LastName, FirstName MiddleName, Suffix").', */
             'data_type'   => 'Tiny Text',
         ),		
@@ -94,6 +94,30 @@
             'label' => 'Copyright Statement',
             'name'  => 'Copyright Statement',
             /* 'description' => 'Information about rights to the media item. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.', */
+        ),
+		
+		// Generation
+		array(
+            'label' => 'Generation (physical asset)',
+            'name'  => 'Generation (physical asset)',
+            /* 'description' => 'Generation.', */
+            'data_type'   => 'Tiny Text',
+        ),
+
+		// Format
+		array(
+            'label' => 'Format (physical asset)',
+            'name'  => 'Format (physical asset)',
+            /* 'description' => 'Format.', */
+            'data_type'   => 'Tiny Text',
+        ),
+
+		// Extent
+		array(
+            'label' => 'Extent (physical asset)',
+            'name'  => 'Extent (physical asset)',
+            /* 'description' => 'Extent.', */
+            'data_type'   => 'Tiny Text',
         ),
 		
 	);
