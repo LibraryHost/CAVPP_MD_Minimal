@@ -26,6 +26,7 @@ class CAVPP_MD_MinimalElementSetPlugin extends Omeka_Plugin_AbstractPlugin
     protected $_hooks = array(
         'install',
         'uninstall',
+		'before_save_item',
 		'after_save_item'
     );
 
@@ -58,6 +59,18 @@ class CAVPP_MD_MinimalElementSetPlugin extends Omeka_Plugin_AbstractPlugin
     }
 
 	/**
+	* Checks the metadata
+	*/
+	public function hookBeforeSaveItem($args)
+    {
+        $item = $args['record'];
+        $inst = metadata($item, array('Minimal Descriptive Metadata', 'Institution'));
+        if(empty($inst)) {
+            $item->addError("Institution", 'Institution cannot be empty!');
+        }
+    }
+	
+	/**
 	* Saves the metadata
 	*/
 	public function hookAfterSaveItem($args)
@@ -66,7 +79,7 @@ class CAVPP_MD_MinimalElementSetPlugin extends Omeka_Plugin_AbstractPlugin
         $item = $args['record'];
     }
 
-        private function _getElementSet($elementSetName)
+    private function _getElementSet($elementSetName)
     {
         return $this->_db
             ->getTable('ElementSet')
